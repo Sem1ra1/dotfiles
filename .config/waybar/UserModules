@@ -1,0 +1,42 @@
+//* ---- 💫 https://github.com/JaKooLit 💫 ---- *//
+/* Waybar Modules Extras */
+
+/* This is where you can add Extra Modules you wish. copy.sh will try to restore*/
+/* this file along with the unique configs and styles. */
+/* IMPORTANT, be mindful with , or ". else waybar will not start */
+
+{
+
+  "custom/sep": {
+    "format": "| ",
+    "tooltip-format": "Monitors"
+  },
+  "custom/monitor-main": {
+    "format": "󰍹  ",
+    "on-click": "/home/alex/.config/hypr/UserScripts/MonitorMain.sh",
+    "tooltip-format": "Main Monitor"
+  },
+
+  "custom/monitor-second": {
+    "format": "󰍺  ",
+    "on-click": "/home/alex/.config/hypr/UserScripts/MonitorSecond.sh",
+    "tooltip-format": "Second Monitor"
+
+  },
+
+
+  "group/monitors": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 500,
+      "children-class": "custom/menu",
+      "transition-left-to-right": true
+    },
+    "modules": [
+      "custom/sep",
+      "custom/monitor-main",
+      "custom/separator#blank",
+      "custom/monitor-second"
+    ]
+  }
+}

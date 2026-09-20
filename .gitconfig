@@ -1,0 +1,7 @@
+[user]
+	name = Sem1ra1
+	email = theonly.lightfall002@gmail.com
+[credential]
+	helper = store
+[init]
+	defaultBranch = main

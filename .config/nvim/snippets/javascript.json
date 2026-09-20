@@ -1,0 +1,32 @@
+{
+  "Console log": {
+    "prefix": "clg",
+    "body": ["console.log($1);"],
+    "description": "Insert console.logggggg"
+  },
+  " log": {
+    "prefix": "forcon",
+    "body": [
+      "for (let ${1:index} = 0; ${1:index} < ${2:Array}.length; ${1:index}++) {",
+      "\tconst element = ${2:Array}[${1:index}];",
+      "\tconsole.log(element)",
+      "}"
+    ],
+    "description": "Insert console.logggggg"
+  },
+  "Test object": {
+    "prefix": "userobj",
+    "body": [
+      "const Hero = {",
+      "\tname: \"Bruce\",",
+      "\tsurname: \"Wayne\",",
+      "\theroName: \"Batman\",",
+      "\tpowers: ['money', 'fighting', 'intelligence'],",
+      "\tgreeting(phrase) {",
+      "\t\tconsole.log(phrase + this.name);",
+      "\t}",
+      "}"
+    ],
+    "description": "Insert console.logggggg"
+  }
+}

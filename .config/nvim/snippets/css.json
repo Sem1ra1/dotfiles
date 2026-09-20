@@ -1,0 +1,20 @@
+{
+  "Font-face import": {
+    "prefix": "@ffi",
+    "body": [
+      "@font-face {",
+      "\tfont-family: \"$1\";",
+      "\tsrc: url(\"$2\") format(\"woff2\");",
+      "\tfont-weight: 400;",
+      "\tfont-style: normal;",
+      "\tfont-display: swap;",
+      "}"
+    ],
+    "description": "Insert font-face at import"
+  },
+  "Background color property": {
+    "prefix": "bgc",
+    "body": ["background-color: ${1:#fff};"],
+    "description": "user Background color"
+  }
+}

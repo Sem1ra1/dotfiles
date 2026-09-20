@@ -1,0 +1,141 @@
+// This configuration is merged with the default vicinae configuration file, which you can obtain by running the `vicinae config default` command.
+// Every item defined in this file takes precedence over the values defined in the default config or any other imported file.
+//
+// You can make manual edits to this file, however you should keep in mind that this file may be written to by vicinae when a configuration change is made through the GUI.
+// When that happens, any custom comments or formatting will be lost.
+//
+// If you want to maintain a configuration file with your own comments and formatting, you should create a separate file and add it to the 'imports' array.
+//
+// Learn more about configuration at https://docs.vicinae.com/config
+
+{
+   "$schema": "https://vicinae.com/schemas/config.json",
+   "close_on_focus_loss": false,
+   "pop_to_root_on_close": true,
+   "wrap_navigation": true,
+   "escape_key_behavior": "close_window",
+   "tray": {
+      "enabled": false
+   },
+   "font": {
+      "normal": {
+         "family": "JetBrainsMono Nerd Font"
+      }
+   },
+   "theme": {
+      "dark": {
+         "name": "vicinae-dark",
+         "icon_theme": "Mint-L-Grey"
+      }
+   },
+   "telemetry": {
+      "system_info": false
+   },
+   "launcher_window": {
+      "opacity": 0.9,
+      "client_side_decorations": {
+         "enabled": true
+      },
+      "compact_mode": {
+         "enabled": true
+      },
+      "floating_status_bar": true
+   },
+   "keybinds": {
+      "toggle-action-panel": "control+B"
+   },
+   "providers": {
+      "@AdityaZxxx/store.vicinae.ollama-wordsmith": {
+         "enabled": false
+      },
+      "@FredrikMWold/store.vicinae.npm": {
+         "enabled": false
+      },
+      "@LuggaPugga/store.vicinae.port-killer": {
+         "enabled": false
+      },
+      "@ShaderCompilation/store.vicinae.simple-bookmarks": {
+         "enabled": false
+      },
+      "@aurelleb/store.vicinae.chromium-bookmarks": {
+         "entrypoints": {
+            "search-bookmarks": {
+               "alias": "b",
+               "enabled": true
+            }
+         }
+      },
+      "@codingcodax/store.vicinae.omarchy-menu": {
+         "enabled": false
+      },
+      "@sameoldlab/store.vicinae.fuzzy-files": {
+         "enabled": false
+      },
+      "@tiagemiguel/store.vicinae.lorem-ipsum": {
+         "enabled": false
+      },
+      "applications": {
+         "entrypoints": {
+            "com.warlordsoftwares.formatlab": {
+               "alias": "Video Music converter"
+            },
+            "nvim": {
+               "alias": "nvim"
+            }
+         }
+      },
+      "clipboard": {
+         "entrypoints": {
+            "history": {
+               "shortcut": "control+alt+V"
+            }
+         }
+      },
+      "files": {
+         "preferences": {
+            "autoIndexing": true,
+            "excludedIndexingPaths": [
+               "/home/alex/.cache",
+               "/home/alex/.npm",
+               "/home/alex/.steam",
+               "/home/alex/.var"
+            ],
+            "indexingPaths": [
+               "/home/alex"
+            ]
+         },
+         "entrypoints": {
+            "search": {
+               "alias": "f"
+            }
+         }
+      },
+      "media": {
+         "enabled": false
+      },
+      "power": {
+         "entrypoints": {
+            "suspend": {
+               "alias": "shutdown",
+               "preferences": {
+                  "confirm": false
+               }
+            }
+         }
+      },
+      "scripts": {
+         "preferences": {
+            "customDirs": [
+               "/home/alex/.config/vicinae/scripts"
+            ]
+         }
+      },
+      "shortcuts": {
+         "entrypoints": {
+            "sct-e777e0ec055b": {
+               "enabled": false
+            }
+         }
+      }
+   }
+}
