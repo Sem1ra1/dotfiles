@@ -22,8 +22,6 @@ return {
 		-- Override specific colors
 		on_colors = function(colors)
 			-- Base color palette
-			colors.background = "#23262e" -- Main background
-			colors.foreground = "#d5ced9" -- Normal text
 			colors.cyan = "#20F5F8" -- Primary accent, identifiers
 			colors.pink = "#ff00aa" -- Secondary accent, properties
 			colors.purple = "#c74ded" -- Keywords, types
@@ -72,6 +70,12 @@ return {
       highlights["@string.css"] = { fg = colors.orange } -- root 'DOCTYPE' tag
       highlights["@punctuation.bracket.css"] = { fg = colors.purple } -- root 'DOCTYPE' tag
       highlights["@function.css"] = { fg = colors.orange } -- root 'DOCTYPE' tag
-		end,
+      highlights.SnacksPickerPathHidden = { fg = colors.fg_gutter, }
+      highlights.SnacksPickerPathIgnored = { fg = colors.fg_dark, }
+      highlights.Constant = { fg = colors.red }
+      highlights.Title = { fg = colors.foreground }
+      highlights.CursorLine = { bg = colors.bg_highlight, }
+      highlights.BlinkCmpKind = { bg = colors.bg}
+    end,
 	}),
 }

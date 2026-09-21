@@ -1,5 +1,4 @@
 if status is-interactive
-    # Commands to run in interactive sessions can go here
     set -x OBSIDIAN_DIR "$HOME/Documents/Obsidian"
     alias obs="cd $OBSIDIAN_DIR"
     

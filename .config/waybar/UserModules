@@ -13,13 +13,13 @@
   },
   "custom/monitor-main": {
     "format": "󰍹  ",
-    "on-click": "/home/alex/.config/hypr/UserScripts/MonitorMain.sh",
+    "on-click": "/home/alex/.config/hypr/scripts/MonitorMain.sh",
     "tooltip-format": "Main Monitor"
   },
 
   "custom/monitor-second": {
     "format": "󰍺  ",
-    "on-click": "/home/alex/.config/hypr/UserScripts/MonitorSecond.sh",
+    "on-click": "/home/alex/.config/hypr/scripts/MonitorSecond.sh",
     "tooltip-format": "Second Monitor"
 
   },
