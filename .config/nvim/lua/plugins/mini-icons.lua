@@ -33,6 +33,7 @@ return {
         ["list"] = { glyph = "", hl = "MiniIconsGrey" },
         ["sh"] = { glyph = "", hl = "MiniIconsGrey" },
         ["text"] = { glyph = "", hl = "MiniIconsGrey" },
+        ["css"] = { glyph = "", hl = "MiniIconsBlue" },
       },
       lsp       = {},
       os        = {},
