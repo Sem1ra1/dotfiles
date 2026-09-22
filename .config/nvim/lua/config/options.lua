@@ -1,6 +1,7 @@
--- This file is automatically loaded by plugins.core
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
+
+vim.g.root_spec = { "lsp", { ".git", "lua" }, "cwd" } -- Root detection
 
 local opt = vim.opt
 
