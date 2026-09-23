@@ -4,3 +4,5 @@ require("configs.Defaults")
 require("configs.Keybinds")
 require("configs.ENVariables")
 require("configs.WindowRules")
+require("monitors")
+

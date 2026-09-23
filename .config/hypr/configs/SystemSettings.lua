@@ -1,4 +1,4 @@
-local scriptsDir = HOME .. "/.config/hypr/scripts"
+local scriptsDir = "~/.config/hypr/scripts"
 
 hl.gesture({
     fingers = 3,

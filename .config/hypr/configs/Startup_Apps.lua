@@ -1,5 +1,5 @@
-local scriptsDir = HOME .. "/.config/hypr/scripts"
-local wallDIR = HOME .. "/Pictures/wallpapers"
+local scriptsDir = "~/.config/hypr/scripts"
+local wallDIR =  "~/Pictures/wallpapers"
 
 hl.on("hyprland.start", function()
     hl.exec_cmd("swww-daemon --format xrgb")
@@ -22,6 +22,6 @@ hl.on("hyprland.start", function()
 end)
 
 hl.on("config.reloaded", function()
-    hl.exec_cmd("sleep 1 && swww img \"" .. wallDIR .. "/Girl.png\" --transition-type none")
+    hl.exec_cmd("sleep 1 && swww img \"" .. "~/Girl.png\" --transition-type none")
 end)
 
