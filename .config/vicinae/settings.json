@@ -75,12 +75,19 @@
          "enabled": false
       },
       "applications": {
+         "preferences": {
+            "defaultAction": "launch",
+            "paths": []
+         },
          "entrypoints": {
             "com.warlordsoftwares.formatlab": {
                "alias": "Video Music converter"
             },
             "nvim": {
                "alias": "nvim"
+            },
+            "org.gnome.font-viewer": {
+               "enabled": false
             }
          }
       },
@@ -98,7 +105,14 @@
                "/home/alex/.cache",
                "/home/alex/.npm",
                "/home/alex/.steam",
-               "/home/alex/.var"
+               "/home/alex/.var",
+               "/home/alex/.local",
+               "/home/alex/.nvm",
+               "/home/alex/.nv",
+               "/home/alex/.mozilla",
+               "/home/alex/.copilot",
+               "/home/alex/.cargo",
+               "/home/alex/.linuxmint"
             ],
             "indexingPaths": [
                "/home/alex"
@@ -124,9 +138,11 @@
          }
       },
       "scripts": {
+         "enabled": true,
          "preferences": {
             "customDirs": [
-               "/home/alex/.config/vicinae/scripts"
+               "/home/alex/.config/vicinae/scripts",
+               "/home/alex/.local/share/vicinae/scripts"
             ]
          }
       },
@@ -136,6 +152,12 @@
                "enabled": false
             }
          }
+      },
+      "theme": {
+         "enabled": false
+      },
+      "wm": {
+         "enabled": false
       }
    }
 }
