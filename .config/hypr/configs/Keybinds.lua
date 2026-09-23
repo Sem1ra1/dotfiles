@@ -25,7 +25,7 @@ hl.bind(mainMod .. " + CTRL + ALT + B", hl.dsp.exec_cmd("pkill -SIGUSR1 waybar")
 
 hl.bind(mainMod .. " + N", hl.dsp.exec_cmd(scriptsDir .. "/Hyprsunset.sh toggle"), { description = "toggle night light" })
 
-hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(scriptsDir .. "/KeyboardLayout.sh switch"), { locked = true, non_consuming = true, description = "switch keyboard layout globally" })
+-- hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(scriptsDir .. "/KeyboardLayout.sh switch"), { locked = true, non_consuming = true, description = "switch keyboard layout globally" })
 hl.bind(mainMod .. " + C", hl.dsp.exec_cmd("hyprpicker -a -s 10 -u 150 --render-inactive"), { description = "Color Picker" })
 
 hl.bind("CTRL + ALT + Delete", hl.dsp.exit(), { description = "exit Hyprland" })
