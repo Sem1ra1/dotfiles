@@ -22,6 +22,5 @@ hl.on("hyprland.start", function()
 end)
 
 hl.on("config.reloaded", function()
-    hl.exec_cmd("sleep 1 && swww img \"" .. "~/Girl.png\" --transition-type none")
+    hl.exec_cmd("sleep 1 && swww img \"$HOME/Pictures/wallpapers/Girl.png\" --transition-type none")
 end)
-
