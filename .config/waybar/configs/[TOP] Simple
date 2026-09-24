@@ -1,5 +1,3 @@
-// ### TOP Simple ## //
-
 {
 "include": [
   "$HOME/.config/waybar/Modules",
@@ -8,15 +6,15 @@
   "$HOME/.config/waybar/ModulesGroups",
   "$HOME/.config/waybar/UserModules",
   ],
-"layer": "top", 
-"position": "top", 
+"layer": "top",
+"position": "top",
 //"mode": "dock",
 "exclusive": true,
 "passthrough": false,
 "gtk-layer-shell": true,
-"margin-left": 6,
-"margin-right": 6,
-"margin-top": 2,
+"margin-left": 10,
+"margin-right": 10,
+"margin-top": 5,
 
 "modules-left": [	
 	"hyprland/workspaces#rw",
