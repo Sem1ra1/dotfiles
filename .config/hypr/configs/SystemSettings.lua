@@ -38,13 +38,14 @@ hl.config({
         mfact = 0.5,
     },
     general = {
-        border_size = 2,
+        border_size = 1,
         gaps_in = 10,
         gaps_out = 10,
         resize_on_border = true,
         layout = "master",
         col = {
             active_border = "rgb(BC14EB)",
+            inactive_border = "rgb(AAAAAA)",
         },
     },
     group = {
@@ -58,9 +59,9 @@ hl.config({
         },
     },
     decoration = {
-        rounding = 5,
+        rounding = 15,
         active_opacity = 2,
-        inactive_opacity = 2.0,
+        inactive_opacity = 2,
         blur = {
             enabled = true,
             size = 6,
