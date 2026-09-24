@@ -39,13 +39,12 @@ hl.config({
     },
     general = {
         border_size = 2,
-        gaps_in = 5,
-        gaps_out = 5,
+        gaps_in = 10,
+        gaps_out = 10,
         resize_on_border = true,
         layout = "master",
         col = {
             active_border = "rgb(BC14EB)",
-            inactive_border = "rgb(BCB9C8)",
         },
     },
     group = {
