@@ -33,9 +33,10 @@ hl.config({
         special_scale_factor = 0.8,
     },
     master = {
-        new_status = "master",
-        new_on_top = true,
-        mfact = 0.5,
+        new_status = "slave",
+        new_on_top = false,
+        focus_master_on_close = true,
+        mfact = 0.6,
     },
     general = {
         border_size = 1,
