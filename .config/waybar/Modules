@@ -231,7 +231,7 @@
 	"format-alt": "{percentage}% 󰾆",
 	"format-alt-click": "click",
 	"tooltip": true,
-	"tooltip-format": "{used:0.1f}GB/{total:0.1f}G",
+	"tooltip-format": "RAM: {used:0.1f}GB/{total:0.1f}G",
 	"on-click-right": "$HOME/.config/hypr/scripts/WaybarScripts.sh --btop"
 },
 
@@ -264,24 +264,25 @@
 		"stopped": "",
 	},
 	// "ignored-players": ["firefox"]
-	"max-length": 30,
+	"max-length": 20,
 },
 
 "network": {
+  "interval": 1,
 	"format": "{ifname}",
 	"format-wifi": "{icon}",
-	"format-ethernet": "󰌘",
-	"format-disconnected": "󰌙",
+	"format-ethernet": " 󰈀 ",
+	"format-disconnected": "",
 	"tooltip-format": "{ipaddr}  {bandwidthUpBits}  {bandwidthDownBits}",
 	"format-linked": "󰈁 {ifname} (No IP)",
 	"tooltip-format-wifi": "{essid} {icon} {signalStrength}%",
-	"tooltip-format-ethernet": "{ifname} 󰌘",
+	"tooltip-format-ethernet": "Connection: {ifname}\nUpload:  {bandwidthUpBytes}\nDownload:   {bandwidthDownBytes}",
 	"tooltip-format-disconnected": "󰌙 Disconnected",
 	"max-length": 30,
 	"format-icons": [
 		"󰤯", "󰤟", "󰤢", "󰤥", "󰤨"
 	],
-	"on-click-right": "$HOME/.config/hypr/scripts/WaybarScripts.sh --nmtui"
+	//"on-click-right": "$HOME/.config/hypr/scripts/WaybarScripts.sh --nmtui"
 },
 
 "network#speed": {
@@ -373,10 +374,26 @@
 	"scroll-step": 5,
 },
 
+
+
+"group/tray": {
+	"orientation": "inherit",
+	"drawer": {
+		"transition-duration": 500,
+		"children-class": "custom/separator#dot",
+		"transition-left-to-right": true
+        },
+	"modules": [
+        "custom/separator#dot",
+        "tray"
+	]
+},
+
 "tray": {
 	"icon-size": 20,
 	"spacing": 4,
 },
+
 
 "wireplumber": {
 	"format": "{icon} {volume} %",

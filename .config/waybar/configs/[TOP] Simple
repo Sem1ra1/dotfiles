@@ -1,3 +1,7 @@
+/* ---- 💫 https://github.com/LinuxBeginnings 💫 ---- */
+
+// ### Minimal - Long ### //
+
 {
 "include": [
   "$HOME/.config/waybar/Modules",
@@ -7,39 +11,42 @@
   "$HOME/.config/waybar/UserModules",
   ],
 "layer": "top",
-"position": "top",
 //"mode": "dock",
 "exclusive": true,
 "passthrough": false,
-"gtk-layer-shell": true,
-"margin-left": 10,
-"margin-right": 10,
-"margin-top": 5,
+"position": "top",
+"spacing": 6,
+"fixed-center": true,
+"ipc": true,
+"margin-top": 3,
+"margin-left": 8,
+"margin-right": 8,
 
-"modules-left": [	
-	"hyprland/workspaces#rw",
-	"group/mobo_drawer",
-	"tray",
-	"hyprland/window"
-//"mpris", 
-//"custom/weather",
-	],
-    
-"modules-center": [
-  //  "group/app_drawer",
-	"clock#2",
-  "group/monitors",
-
-],
-    
-"modules-right": [
-  "custom/keyboard",
+"modules-left": [
+	"custom/separator#blank",
+	"custom/hypr_layout",
+	"custom/separator#blank",
+	"custom/menu",
+	"custom/separator#blank_2", 
+	"hyprland/workspaces#pacman",
+	"custom/separator#blank_2",
+	"mpris",
 	"group/notify",
-  "network",
-	"battery",
-  "group/audio",
+	"tray",
+	],
+"modules-center": [
+	"clock",
+	"idle_inhibitor",
+	],
+"modules-right": [
+	"group/mobo_drawer",
+	"custom/separator#blank_2",
+	"group/laptop",
+	"custom/separator#blank_2",
+	"group/audio",
+	"custom/separator#blank_2",
 	"custom/nightlight",
 	"custom/power",
 	],
-}
 
+}

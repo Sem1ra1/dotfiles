@@ -29,7 +29,7 @@ icon_on() {
   case "$ICON_MODE" in
     sunset)
       # sunset emoji (falls back to tofu if no emoji font)
-      printf "🌇" 
+      printf "" 
       ;;
     blue)
       # no color in text; rely on CSS .on to style if desired
@@ -81,7 +81,7 @@ cmd_status() {
   fi
 
   if [[ "$onoff" == "on" ]]; then
-    txt="<span size='18pt'>$(icon_on)</span>"
+    txt="<span size='14pt'>$(icon_on)</span>"
     cls="on"
     tip="Night light on @ ${TARGET_TEMP}K"
   else

@@ -33,19 +33,22 @@
 },
 
 "group/mobo_drawer": {
-	"orientation": "inherit",
-	"drawer": {
-		"transition-duration": 500,
-		"children-class": "cpu",
-		"transition-left-to-right": true
-        },
-	"modules": [
-		"cpu",
-		"temperature",		
-		"power-profiles-daemon",	
-		"memory",
-		"disk",
-	]
+    "orientation": "horizontal",
+
+    "drawer": {
+        "click-to-reveal": true,
+        "transition-duration": 300,
+        "transition-left-to-right": true
+    },
+
+    "modules": [
+        "network",
+        "memory",
+        "cpu",
+        "temperature",
+        "power-profiles-daemon",
+        "disk"
+    ]
 },
 "group/laptop": {
 	"orientation": "inherit",
@@ -103,7 +106,6 @@
         },
 	"modules": [
 		"custom/swaync",
-		"custom/dot_update",
 	]
 },
 
@@ -136,4 +138,5 @@
         "custom/reboot"
       ]
 },
+
 }

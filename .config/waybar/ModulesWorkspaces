@@ -193,8 +193,10 @@
 		"class<brave-browser>": "🦁 ",
 		"class<tor browser>": " ",
 		"class<firefox-developer-edition>": "🦊 ",
+		"class<vivaldi-stable|vivaldi>": "󰇧 ",
 
-		"class<kitty|konsole|[Aa]lacritty>": " ",
+		"class<konsole|[Aa]lacritty>": " ",
+		"class<kitty>": "󰄛 ",
 		"class<kitty-dropterm>": " ",
 		"class<com.mitchellh.ghostty>": " ",
 		"class<org.wezfurlong.wezterm>": " ",
@@ -269,6 +271,7 @@
 		"class<org.pipewire.Helvum>": "󰓃",
 		"class<localsend>":"",
 		"class<PrusaSlicer|UltiMaker-Cura|OrcaSlicer>": "󰹛",
+		"class<md.obsidian.Obsidian|Obsidian|obsidian>": "󰗚  ",
 
 		"class<io.github.kolunmi.Bazaar>": " ",
 		"title<^Bazaar$>": " ",

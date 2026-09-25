@@ -28,30 +28,26 @@ hl.gesture({
 -- })
 
 hl.config({
-    dwindle = {
-        preserve_split = true,
-        special_scale_factor = 0.8,
-    },
     master = {
         new_status = "slave",
         new_on_top = false,
         focus_master_on_close = true,
-        mfact = 0.6,
+        mfact = 0.5,
     },
     general = {
-        border_size = 1,
+        border_size = 0,
         gaps_in = 10,
         gaps_out = 10,
         resize_on_border = true,
         layout = "master",
         col = {
-            active_border = "rgb(BC14EB)",
-            inactive_border = "rgb(AAAAAA)",
+            -- active_border = "rgb(BC14EB)",
+            -- inactive_border = "rgb(AAAAAA)",
         },
     },
     group = {
         col = {
-            border_active = "rgb(BC14EB)",
+            -- border_active = "rgb(BC14EB)",
         },
         groupbar = {
             col = {
@@ -60,9 +56,12 @@ hl.config({
         },
     },
     decoration = {
-        rounding = 15,
+        rounding = 10,
         active_opacity = 2,
         inactive_opacity = 2,
+        dim_inactive = true,
+        dim_special = 0.5,
+        dim_strength = 0.3,
         blur = {
             enabled = true,
             size = 6,
@@ -120,7 +119,7 @@ hl.config({
         vrr = 2,
         mouse_move_enables_dpms = true,
         enable_swallow = false,
-        swallow_regex = "^(kitty)$",
+        -- swallow_regex = "^(kitty)$",
         focus_on_activate = false,
         initial_workspace_tracking = 0,
         middle_click_paste = false,
