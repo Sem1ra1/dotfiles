@@ -1,3 +1,5 @@
+source /usr/share/cachyos-fish-config/cachyos-config.fish
+
 if status is-interactive
     set -x OBSIDIAN_DIR "$HOME/Documents/Obsidian"
     alias obs="cd $OBSIDIAN_DIR"
@@ -17,3 +19,8 @@ if status is-interactive
     alias lla="ls -la"
     alias lt="ls --tree"
 end
+# overwrite greeting
+# potentially disabling fastfetch
+#function fish_greeting
+#    # smth smth
+#end
