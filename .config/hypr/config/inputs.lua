@@ -3,6 +3,7 @@
 hl.config({
     input = {
         kb_layout = "us,ru",
+        kb_variant = "unieng, unirus",
         kb_options = "grp:win_space_toggle",
         kb_model = "",
         kb_rules = "",

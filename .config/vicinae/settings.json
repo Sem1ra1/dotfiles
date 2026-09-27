@@ -32,14 +32,15 @@
       "system_info": false
    },
    "launcher_window": {
-      "opacity": 0.9,
+      "opacity": 0.7,
       "client_side_decorations": {
          "enabled": true
       },
       "compact_mode": {
          "enabled": true
       },
-      "floating_status_bar": true
+      "floating_status_bar": true,
+      "material": "blur"
    },
    "keybinds": {
       "toggle-action-panel": "control+B"

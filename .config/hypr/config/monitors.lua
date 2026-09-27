@@ -12,4 +12,13 @@ hl.monitor({
     mode      = "preferred",
     position  = "auto",
     scale     = "auto",
+    mirror = MONITOR2
+})
+
+
+hl.monitor({
+    output    = MONITOR2,
+    mode      = "preferred",
+    position  = "auto",
+    scale     = "auto",
 })

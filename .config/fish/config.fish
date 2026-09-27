@@ -13,14 +13,11 @@ if status is-interactive
     set -x KITTY_CFG "$HOME/.config/kitty/kitty.conf"
     alias kittycfg="nvim $KITTY_CFG"
 
-    alias ls="lsd --oneline"
-    alias l="ls -l"
-    alias la="ls -a"
-    alias lla="ls -la"
-    alias lt="ls --tree"
+    # alias ls="lsd --oneline"
+    # alias l="ls -l"
+    # alias la="ls -a"
+    # alias lla="ls -la"
+    # alias lt="ls --tree"
 end
-# overwrite greeting
-# potentially disabling fastfetch
-#function fish_greeting
-#    # smth smth
-#end
+
+set -g fish_greeting

@@ -19,7 +19,7 @@ hl.bind(mainMod .. " + Q",           hl.dsp.window.close())
 hl.bind(mainMod .. " + ALT + Space", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + D",           hl.dsp.window.fullscreen({ mode = 1 }))
 hl.bind(mainMod .. " + F",           hl.dsp.window.fullscreen())
-hl.bind(mainMod .. " + J",           hl.dsp.layout("togglesplit"))
+-- hl.bind(mainMod .. " + J",           hl.dsp.layout("togglesplit"))
 
 -- Change focus
 hl.bind(mainMod .. " + Left",  hl.dsp.focus({ direction = "left" }))
@@ -56,6 +56,11 @@ end
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag())
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize())
 
+-- Resize with keyboard (H, J, K, L)
+hl.bind(mainMod .. " + SHIFT + H", hl.dsp.window.resize({ x = -50, y = 0, relative = true }), { repeating = true, description = "resize left (-50)" })
+hl.bind(mainMod .. " + SHIFT + L", hl.dsp.window.resize({ x = 50, y = 0, relative = true }), { repeating = true, description = "resize right (-50)" })
+hl.bind(mainMod .. " + SHIFT + K", hl.dsp.window.resize({ x = 0, y = -50, relative = true }), { repeating = true, description = "resize up (-50)" })
+hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.resize({ x = 0, y = 50, relative = true }), { repeating = true, description = "resize down (+50)" })
 -- Zoom
 local function zoomfunction(value)
     local zoomvalue = hl.get_config("cursor:zoom_factor")
@@ -88,9 +93,10 @@ hl.bind(mainMod .. " + B",          hl.dsp.exec_cmd(launchPrefix .. BROWSER))
 hl.bind("CONTROL + SHIFT + Escape", hl.dsp.exec_cmd(launchPrefix .. TERMINAL .. " -e btop"))
 hl.bind(mainMod .. " + Z",          hl.dsp.exec_cmd(noctCall .. "settings-toggle"))
 hl.bind(mainMod .. " + X",          hl.dsp.exec_cmd(noctCall .. "panel-toggle control-center"))
-hl.bind("ALT + Space",      hl.dsp.exec_cmd(noctCall .. "panel-toggle launcher"))
+-- hl.bind("ALT + Space",      hl.dsp.exec_cmd(noctCall .. "panel-toggle launcher"))
+hl.bind("ALT + Space",      hl.dsp.exec_cmd("vicinae toggle"))
 hl.bind(mainMod .. " + period",     hl.dsp.exec_cmd(noctCall .. "panel-toggle launcher /emo"))
-hl.bind(mainMod .. " + L",          hl.dsp.exec_cmd(noctCall .. "session lock"))
+-- hl.bind(mainMod .. " + L",          hl.dsp.exec_cmd(noctCall .. "session lock"))
 hl.bind(mainMod .. " + ALT + C",    hl.dsp.exec_cmd(noctCall .. "panel-toggle session"))
 
 ---------------------------
@@ -152,6 +158,12 @@ for i = 1, NUM_WPM do
     hl.bind(mainMod .. " + CONTROL + " .. digitCode(key), hl.dsp.focus({ workspace = "m~" .. i }))
 end
 
+-- Focus with keyboard (H, J, K, L)
+hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }), { description = "focus left" })
+hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }), { description = "focus right" })
+hl.bind(mainMod .. " + K", hl.dsp.focus({ direction = "up" }), { description = "focus up" })
+hl.bind(mainMod .. " + J", hl.dsp.focus({ direction = "down" }), { description = "focus down" })
+
 -- Move to adjacent workspaces and next empty on a given monitor
 hl.bind(mainMod .. " + CONTROL + Right",       hl.dsp.focus({ workspace = "m+1" }))
 hl.bind(mainMod .. " + CONTROL + Left",        hl.dsp.focus({ workspace = "m-1" }))
@@ -166,3 +178,47 @@ hl.bind(mainMod .. " + CONTROL + mouse_down", hl.dsp.focus({ workspace = "m+1" }
 -- Special workspace (scratchpad)
 hl.bind(mainMod .. " + SHIFT + U", hl.dsp.window.move({ workspace = "special" }))
 hl.bind(mainMod .. " + U",         hl.dsp.workspace.toggle_special())
+
+-- Tray Apps
+hl.bind("SUPER + O", function ()
+    local obsidian = "class:md.obsidian.Obsidian"
+
+    if hl.get_workspace("special:obsidian") then
+        hl.dispatch(hl.dsp.window.move({
+            workspace = hl.get_active_workspace(),
+            window = "tag:obsidian",
+        }))
+
+        hl.dispatch(hl.dsp.window.clear_tags({
+            window = "tag:obsidian",
+        }))
+
+        hl.dispatch(hl.dsp.focus({
+            window = obsidian,
+        }))
+
+        hl.dispatch(hl.dsp.window.fullscreen({
+            mode = 1,
+        }))
+    else
+        hl.dispatch(hl.dsp.window.tag({
+            tag = "obsidian",
+            window = obsidian,
+        }))
+
+        hl.dispatch(hl.dsp.window.fullscreen({
+            mode = 0,
+        }))
+
+        hl.dispatch(hl.dsp.window.move({
+            workspace = "special:obsidian",
+            window = obsidian,
+            follow = false,
+        }))
+    end
+end)
+
+hl.bind("SUPER + I", hl.dsp.send_shortcut({
+    mods = "",
+    key = "RETURN"
+}))
