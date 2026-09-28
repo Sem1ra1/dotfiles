@@ -13,6 +13,8 @@ if status is-interactive
     set -x KITTY_CFG "$HOME/.config/kitty/kitty.conf"
     alias kittycfg="nvim $KITTY_CFG"
 
+    alias mnvim="NVIM_APPNAME=nvim_refined nvim"
+
     # alias ls="lsd --oneline"
     # alias l="ls -l"
     # alias la="ls -a"
