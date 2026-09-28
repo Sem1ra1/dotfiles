@@ -69,6 +69,9 @@
       "@codingcodax/store.vicinae.omarchy-menu": {
          "enabled": false
       },
+      "@millin_gabani/store.raycast.obsidian-smart-capture": {
+         "enabled": false
+      },
       "@sameoldlab/store.vicinae.fuzzy-files": {
          "enabled": false
       },

@@ -1,4 +1,10 @@
 hl.config({
+    general = {
+        layout = "master",
+    },
+    master = {
+  
+    },
     dwindle = {
         preserve_split = true,
     },
