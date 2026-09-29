@@ -10,9 +10,9 @@ return {
       {
         "<leader>gg",
         function()
-          Snacks.lazygit()
+          Snacks.lazygit({ cwd = Snacks.git.get_root(0) or vim.fn.getcwd() })
         end,
-        desc = "Lazygit",
+        desc = "Lazygit (current project)",
       },
     },
   },
