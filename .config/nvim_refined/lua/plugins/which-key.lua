@@ -9,6 +9,7 @@ return {
       {
         mode = { "n", "x" },
         { "<leader><tab>", group = "tabs" },
+        { "<leader>a", group = "AI" },
         { "<leader>c", group = "code" },
         { "<leader>d", group = "debug" },
         { "<leader>dp", group = "profiler" },
@@ -42,10 +43,15 @@ return {
         -- better descriptions
         { "gx", desc = "Open with system app" },
       },
+      -- Hidden keymaps
       {
         "<leader>e",
         hidden = true,
       },
+      -- {
+      --   "<leader>E",
+      --   hidden = true,
+      -- },
     },
   },
   keys = {
@@ -64,4 +70,4 @@ return {
       desc = "Window Hydra Mode (which-key)",
     },
   }
-} 
+}

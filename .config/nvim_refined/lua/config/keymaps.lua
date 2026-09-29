@@ -40,10 +40,7 @@ map("v", "<A-k>", ":<C-u>execute \"'<,'>move '<-\" . (v:count1 + 1)<cr>gv=gv", {
 -- buffers
 map("n", "<S-h>", "<cmd>bprevious<cr>", { desc = "Prev Buffer" })
 map("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Next Buffer" })
-map("n", "[b", "<cmd>bprevious<cr>", { desc = "Prev Buffer" })
-map("n", "]b", "<cmd>bnext<cr>", { desc = "Next Buffer" })
 map("n", "<leader>bb", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
-map("n", "<leader>`", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
 map("n", "<leader>bd", function() Snacks.bufdelete() end, { desc = "Delete Buffer" })
 map("n", "<leader>bo", function() Snacks.bufdelete.other() end, { desc = "Delete Other Buffers" })
 map("n", "<leader>bi", function() Snacks.bufdelete.invisible() end, { desc = "Delete Invisible Buffers" })
@@ -197,9 +194,9 @@ map({ "n", "t" }, "<c-/>", function() Snacks.terminal.focus(nil, { cwd = Snacks.
 map({ "n", "t" }, "<c-_>", function() Snacks.terminal.focus(nil, { cwd = Snacks.git.get_root() }) end, { desc = "which_key_ignore" })
 
 -- windows
-map("n", "<leader>-", "<C-W>s", { desc = "Split Window Below", remap = true })
-map("n", "<leader>|", "<C-W>v", { desc = "Split Window Right", remap = true })
 map("n", "<leader>wd", "<C-W>c", { desc = "Delete Window", remap = true })
+-- map("n", "<leader>-", "<C-W>s", { desc = "Split Window Below", remap = true })
+-- map("n", "<leader>|", "<C-W>v", { desc = "Split Window Right", remap = true })
 -- Snacks.toggle.zoom():map("<leader>wm"):map("<leader>uZ")
 -- Snacks.toggle.zen():map("<leader>uz")
 
