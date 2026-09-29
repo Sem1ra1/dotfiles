@@ -26,7 +26,7 @@ return {
           border = "rounded",
         },
         documentation = {
-          auto_show = true,
+          auto_show = false,
           auto_show_delay_ms = 200,
           window = { border = "rounded" },
         },
@@ -110,7 +110,7 @@ return {
 
       vim.diagnostic.config({
         virtual_text = {
-          spacing = 2,
+          spacing = 15,
           source = "if_many",
           prefix = function(diagnostic)
             return diagnostic_icons[diagnostic.severity] or "●"
