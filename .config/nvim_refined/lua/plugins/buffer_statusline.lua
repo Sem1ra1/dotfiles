@@ -98,15 +98,9 @@ return {
           lualine_a = { "mode" },
           lualine_b = { "branch" },
           lualine_c = {
-            project_root,
             {
-              "diagnostics",
-              symbols = {
-                error = icons.diagnostics.Error,
-                warn = icons.diagnostics.Warn,
-                info = icons.diagnostics.Info,
-                hint = icons.diagnostics.Hint,
-              },
+              project_root,
+              color = { fg = "#82aaff" },
             },
             {
               function()
@@ -166,6 +160,15 @@ return {
               color = function()
                 return { fg = Snacks.util.color("Debug") }
               end,
+            },
+            {
+              "diagnostics",
+              symbols = {
+                error = icons.diagnostics.Error,
+                warn = icons.diagnostics.Warn,
+                info = icons.diagnostics.Info,
+                hint = icons.diagnostics.Hint,
+              },
             },
             {
               require("lazy.status").updates,
