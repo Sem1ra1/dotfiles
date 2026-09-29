@@ -87,6 +87,9 @@
             "com.warlordsoftwares.formatlab": {
                "alias": "Video Music converter"
             },
+            "firefox": {
+               "alias": "Music Player"
+            },
             "nvim": {
                "alias": "nvim"
             },

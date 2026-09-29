@@ -62,6 +62,7 @@ return {
         "pyright",
         "ts_ls",
         "yamlls",
+        "emmet_language_server"
       },
     },
   },

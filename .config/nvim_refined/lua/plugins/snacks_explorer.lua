@@ -26,7 +26,31 @@ return {
       { "<leader>/", function() Snacks.picker.grep() end, desc = "Grep" },
       { "<leader>:", function() Snacks.picker.command_history() end, desc = "Command History" },
       { "<leader>n", function() Snacks.picker.notifications() end, desc = "Notification History" },
-      { "<leader>e", function() Snacks.explorer() end, desc = "File Explorer" },
+      {
+        "<leader>fe",
+        function()
+          Snacks.explorer({ cwd = Snacks.git.get_root() or vim.fn.getcwd() })
+        end,
+        desc = "Explorer (project root)",
+      },
+      {
+        "<leader>fE",
+        function()
+          local buf = vim.api.nvim_get_current_buf()
+          local file = vim.api.nvim_buf_get_name(buf)
+          local cwd = vim.fn.getcwd()
+          if file ~= "" and vim.bo[buf].buftype == "" then
+            local file_dir = vim.fs.dirname(file)
+            if vim.fn.isdirectory(file_dir) == 1 then
+              cwd = file_dir
+            end
+          end
+          Snacks.explorer({ cwd = cwd })
+        end,
+        desc = "Explorer (file directory)",
+      },
+      { "<leader>e", "<leader>fe", remap = true, desc = "Explorer (project root)" },
+      { "<leader>E", "<leader>fE", remap = true, desc = "Explorer (file directory)" },
 
       -- find
       { "<leader>fb", function() Snacks.picker.buffers() end, desc = "Buffers" },
