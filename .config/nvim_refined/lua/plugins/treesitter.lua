@@ -171,4 +171,25 @@ return {
     event = "InsertEnter",
     opts = {},
   },
+
+  {
+    "nvim-treesitter/nvim-treesitter-context",
+    event = { "BufReadPost", "BufNewFile" },
+    opts = function()
+      local treesitter_context = require("treesitter-context")
+      Snacks.toggle({
+        name = "Treesitter Context",
+        get = treesitter_context.enabled,
+        set = function(state)
+          if state then
+            treesitter_context.enable()
+          else
+            treesitter_context.disable()
+          end
+        end,
+      }):map("<leader>ut")
+
+      return { mode = "cursor", max_lines = 3 }
+    end,
+  },
 }
