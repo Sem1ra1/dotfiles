@@ -6,11 +6,19 @@ return {
       local function set_border_color()
         vim.api.nvim_set_hl(0, "BlinkCmpMenuBorder", { fg = "#1e2030", bg = "NONE" })
       end
+      local function schedule_border_color()
+        vim.schedule(set_border_color)
+      end
 
-      set_border_color()
+      schedule_border_color()
       vim.api.nvim_create_autocmd("ColorScheme", {
         group = group,
-        callback = set_border_color,
+        callback = schedule_border_color,
+      })
+      vim.api.nvim_create_autocmd("User", {
+        group = group,
+        pattern = "VeryLazy",
+        callback = schedule_border_color,
       })
     end,
     opts = {
@@ -32,18 +40,25 @@ return {
         },
         menu = {
           auto_show = true,
+          draw = { gap = 2},
           border = "rounded",
-          winhighlight = "Normal:BlinkCmpMenu,FloatBorder:BlinkCmpMenuBorder,CursorLine:BlinkCmpMenuSelection,Search:None",
+          winhighlight = "Normal:Normal,FloatBorder:BlinkCmpMenuBorder,CursorLine:BlinkCmpMenuSelection,Search:None",
         },
         documentation = {
           auto_show = false,
           auto_show_delay_ms = 200,
-          window = { border = "rounded" },
+         window = {
+            border = "rounded",
+            winhighlight = "Normal:Normal,FloatBorder:BlinkCmpMenuBorder,CursorLine:BlinkCmpDocCursorLine,Search:None",
+          },
         },
       },
       signature = {
-        enabled = false,
-        window = { border = "rounded" },
+        enabled = true,
+       window = {
+            border = "rounded",
+            winhighlight = "Normal:Normal,FloatBorder:BlinkCmpMenuBorder,CursorLine:BlinkCmpDocCursorLine,Search:None",
+          },
       },
       fuzzy = {
         implementation = "prefer_rust_with_warning",
@@ -53,10 +68,13 @@ return {
   -- Border for signature_help
   {
     "folke/noice.nvim",
+    enabled = true,
     opts = {
-      presets = {
-        lsp_doc_border = true,
-      },
+      lsp = {
+        signature = {
+          enabled = false
+        },
+      }
     },
   },
 }
