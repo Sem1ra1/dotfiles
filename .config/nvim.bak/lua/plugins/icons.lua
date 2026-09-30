@@ -6,6 +6,7 @@ return {
         kinds = {
           Array         = " ",
           Boolean       = "󰨙 ",
+          Buffer        = "󰈙 ",
           Class         = " ",
           Codeium       = "󰘦 ",
           Color         = " ",

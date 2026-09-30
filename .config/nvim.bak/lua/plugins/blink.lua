@@ -21,6 +21,9 @@ return {
 			},
 			sources = {
 				providers = {
+					buffer = {
+						kind = "Buffer",
+					},
 					lsp = {
 						name = "LSP",
 						module = "blink.cmp.sources.lsp",
