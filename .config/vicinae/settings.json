@@ -84,6 +84,9 @@
             "paths": []
          },
          "entrypoints": {
+            "Happ": {
+               "alias": "vpn"
+            },
             "com.warlordsoftwares.formatlab": {
                "alias": "Video Music converter"
             },
