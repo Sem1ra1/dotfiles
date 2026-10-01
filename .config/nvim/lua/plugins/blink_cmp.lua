@@ -24,7 +24,7 @@ return {
     opts = {
       keymap = {
         preset = "default",
-        ["<Tab>"] = { "accept", "fallback" },
+        -- ["<Tab>"] = { "accept", "fallback" },
         ["<C-space>"] = { "show", "show_documentation", "hide_documentation" },
       },
       appearance = {
@@ -38,9 +38,21 @@ return {
           show_on_insert_on_trigger_character = true,
           show_on_accept_on_trigger_character = true,
         },
+        ghost_text = {
+          enabled = true,
+        },
         menu = {
           auto_show = true,
-          draw = { gap = 2 },
+          draw = {
+            -- padding = {0, 1},
+            cursorline_priority = 0,
+            gap = 2,
+            columns = {
+              { "kind_icon" },
+              { "label", "label_description", gap = 1 },
+              { "kind" },
+            },
+          },
           border = "rounded",
           winhighlight = "Normal:Normal,FloatBorder:BlinkCmpMenuBorder,CursorLine:BlinkCmpMenuSelection,Search:None",
         },

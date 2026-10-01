@@ -62,7 +62,7 @@ return {
           Object        = " ",
           Operator      = " ",
           Package       = " ",
-          Property      = "󰉿 ",
+          Property      = " ",
           Reference     = " ",
           Snippet       = "󱄽 ",
           String        = " ",
@@ -73,7 +73,7 @@ return {
           TypeParameter = " ",
           Unit          = " ",
           Value         = " ",
-          Variable      = "󰀫 ",
+          Variable      = " ",
         },
       },
       kind_filter = {

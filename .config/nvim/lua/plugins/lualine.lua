@@ -35,12 +35,13 @@ return {
         },
         lualine_x = {
           Snacks.profiler.status(),
-          -- stylua: ignore
-          {
-            function() return require("noice").api.status.command.get() end,
-            cond = function() return package.loaded["noice"] and require("noice").api.status.command.has() end,
-            color = function() return { fg = Snacks.util.color("Statement") } end,
-          },
+
+          -- Shows last typed operation. Haven't found it useful
+          -- {
+          --   function() return require("noice").api.status.command.get() end,
+          --   cond = function() return package.loaded["noice"] and require("noice").api.status.command.has() end,
+          --   color = function() return { fg = Snacks.util.color("Statement") } end,
+          -- },
           -- stylua: ignore
           {
             function() return require("noice").api.status.mode.get() end,
