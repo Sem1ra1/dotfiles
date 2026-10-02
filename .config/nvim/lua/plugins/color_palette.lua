@@ -66,4 +66,16 @@ return {
       { "<leader>ux", desc = "Color picker" },
     },
   },
+{
+  "folke/which-key.nvim",
+  opts = {
+    spec = {
+      {
+        "<leader>ux",
+        desc = "Color picker",
+        icon = "",
+      },
+    },
+  },
+},
 }

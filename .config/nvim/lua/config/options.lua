@@ -7,3 +7,5 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
     vim.b.autoformat = false
   end,
 })
+
+vim.opt.scrolloff = 15;
