@@ -3,10 +3,7 @@ return {
     "neovim/nvim-lspconfig",
 
     opts = {
-      -- LSP Server Settings
-      -- Sets the default configuration for an LSP client (or all clients if the special name "*" is used).
       servers = {
-        -- configuration for all lsp servers
         stylua = { enabled = false },
         lua_ls = {
           settings = {
@@ -37,16 +34,24 @@ return {
             },
           },
         },
+
+        tailwindcss = {
+          cmd = {
+            "tailwindcss-language-server",
+            "--stdio",
+          },
+        },
       },
     },
   },
 
   {
-   "mason-org/mason-lspconfig.nvim",
+    "mason-org/mason-lspconfig.nvim",
     opts = {
       ensure_installed = {
-        "ts_ls"
-      }
-    }
-  }
+        "ts_ls",
+        "tailwindcss",
+      },
+    },
+  },
 }

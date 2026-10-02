@@ -1,26 +1,6 @@
 return {
   {
     "saghen/blink.cmp",
-    init = function()
-      local group = vim.api.nvim_create_augroup("BlinkCmpMenuBorderColor", { clear = true })
-      local function set_border_color()
-        vim.api.nvim_set_hl(0, "BlinkCmpMenuBorder", { fg = "#1e2030", bg = "NONE" })
-      end
-      local function schedule_border_color()
-        vim.schedule(set_border_color)
-      end
-
-      schedule_border_color()
-      vim.api.nvim_create_autocmd("ColorScheme", {
-        group = group,
-        callback = schedule_border_color,
-      })
-      vim.api.nvim_create_autocmd("User", {
-        group = group,
-        pattern = "VeryLazy",
-        callback = schedule_border_color,
-      })
-    end,
     opts = {
       keymap = {
         preset = "default",
