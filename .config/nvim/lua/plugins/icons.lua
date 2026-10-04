@@ -137,6 +137,8 @@ return {
       opts.picker.icons = opts.picker.icons or {}
       opts.picker.icons.kinds = opts.picker.icons.kinds or {}
       opts.picker.icons.kinds.Variable = LazyVim.config.icons.kinds.Variable
+      opts.picker.icons.kinds.Method = LazyVim.config.icons.kinds.Method
+      opts.picker.icons.kinds.Property = LazyVim.config.icons.kinds.Field
     end,
   },
 }
