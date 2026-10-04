@@ -193,7 +193,7 @@ hl.bind(mainMod .. " + U",         hl.dsp.workspace.toggle_special())
 ---- Custom binds  ----
 -----------------------
 
--- Tray Apps
+-- Tray Apps & Specific Workspaces
 hl.bind("SUPER + O", function ()
     local obsidian = "class:md.obsidian.Obsidian"
 
@@ -231,6 +231,47 @@ hl.bind("SUPER + O", function ()
         }))
     end
 end)
+
+
+hl.bind("SUPER + S", function ()
+    local mplayer = "class:tauonmb"
+
+    if hl.get_workspace("special:tauonmb") then
+        hl.dispatch(hl.dsp.window.move({
+            workspace = hl.get_active_workspace(),
+            window = "tag:tauonmb",
+        }))
+
+        hl.dispatch(hl.dsp.window.clear_tags({
+            window = "tag:tauonmb",
+        }))
+
+        hl.dispatch(hl.dsp.focus({
+            window = mplayer,
+        }))
+
+        hl.dispatch(hl.dsp.window.fullscreen({
+            mode = 1,
+        }))
+    else
+        hl.dispatch(hl.dsp.window.tag({
+            tag = "tauonmb",
+            window = mplayer,
+        }))
+
+        hl.dispatch(hl.dsp.window.fullscreen({
+            mode = 0,
+        }))
+
+        hl.dispatch(hl.dsp.window.move({
+            workspace = "special:tauonmb",
+            window = mplayer,
+            follow = false,
+        }))
+    end
+end)
+
+hl.bind(mainMod .. " + G" , hl.dsp.focus({ workspace = "gaming" }))
 
 -- Rebinds (broken ENTER)
 hl.bind("SUPER + I", hl.dsp.send_shortcut({
