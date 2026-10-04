@@ -130,4 +130,13 @@ return {
       },
     }
   },
+  {
+    "folke/snacks.nvim",
+    opts = function(_, opts)
+      opts.picker = opts.picker or {}
+      opts.picker.icons = opts.picker.icons or {}
+      opts.picker.icons.kinds = opts.picker.icons.kinds or {}
+      opts.picker.icons.kinds.Variable = LazyVim.config.icons.kinds.Variable
+    end,
+  },
 }
