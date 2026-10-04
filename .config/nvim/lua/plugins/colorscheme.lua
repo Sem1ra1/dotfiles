@@ -118,10 +118,10 @@ return {
           fg = c.fg,
           bg = "#1a1b26",
         }
-
+        -- BUG: turning on fg makes docs look at they should. But also makes LazyGit look worse. Check for hl groups specifically for lazygit!
         -- Рамка
         hl.FloatBorder = {
-          -- fg = "#16161e",
+          fg = "#16161e",
           bg = "#1a1b26",
         }
 

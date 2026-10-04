@@ -4,6 +4,8 @@ return {
 
     opts = {
       servers = {
+        vtsls = {
+        },
         stylua = { enabled = false },
         lua_ls = {
           settings = {
