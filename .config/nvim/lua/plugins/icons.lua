@@ -114,7 +114,7 @@ return {
           Object        = " ",
           Operator      = " ",
           Package       = " ",
-          Property      = " ",
+          Property      = " ",
           Reference     = " ",
           Snippet       = "󱄽 ",
           String        = " ",
