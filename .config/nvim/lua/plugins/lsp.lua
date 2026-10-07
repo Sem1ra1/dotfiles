@@ -43,6 +43,14 @@ return {
             "--stdio",
           },
         },
+
+        stylelint_lsp = {
+          filetypes = {
+            "css",
+            "scss",
+            "less"
+          }
+        }
       },
     },
   },

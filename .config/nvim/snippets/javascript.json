@@ -1,0 +1,17 @@
+{
+  "Test object": {
+    "prefix": "testobj",
+    "body": [
+      "const Hero = {",
+      "\tname: \"Bruce\",",
+      "\tsurname: \"Wayne\",",
+      "\theroName: \"Batman\",",
+      "\tpowers: ['money', 'fighting', 'intelligence'],",
+      "\tgreeting(phrase) {",
+      "\t\tconsole.log(phrase + this.name);",
+      "\t}",
+      "}"
+    ],
+    "description": "USER: Test object"
+  }
+}

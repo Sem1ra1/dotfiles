@@ -1,0 +1,7 @@
+{
+  "Font-face import": {
+    "prefix": "img",
+    "body": ["<img src=\"\" alt=\"\" width=\"\" height=\"\">"],
+    "description": "USER: Image tag with width and height"
+  }
+}
