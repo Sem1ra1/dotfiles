@@ -17,7 +17,8 @@
       },
       {
         "language": [
-          "css"
+          "css",
+          "scss"
         ],
         "path": "./css.json"
       },
