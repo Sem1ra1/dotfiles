@@ -13,6 +13,13 @@ return {
       sources = {
         default = { "lsp", "path", "snippets", "buffer" },
         providers = {
+          -- Don't show duplicates for path autocompletions from both sources: LSP and Path. Exclude LSP sourse
+          lsp = {
+            should_show_items = function(context)
+              local before_current_word = context.line:sub(1, context.bounds.start_col - 1)
+              return before_current_word:sub(-1) ~= "/"
+            end,
+          },
           snippets = {
           },
         },
