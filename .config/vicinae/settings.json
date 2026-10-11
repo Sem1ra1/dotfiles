@@ -166,6 +166,15 @@
             }
          }
       },
+      "snippets": {
+         "preferences": {
+            "enabled": true,
+            "keyDelay": "2",
+            "layout": "us",
+            "prePasteDelay": "0",
+            "undo": true
+         }
+      },
       "theme": {
          "enabled": false
       },
