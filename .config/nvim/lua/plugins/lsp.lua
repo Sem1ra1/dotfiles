@@ -1,69 +1,16 @@
 return {
   {
     "neovim/nvim-lspconfig",
-
     opts = {
       servers = {
-        cssls = {},
-        vtsls = {
+        cssls = {
+          enabled = false,
         },
-        stylua = { enabled = false },
-        lua_ls = {
-          settings = {
-            Lua = {
-              diagnostics = {
-                globals = { "vim", "Snacks", "LazyVim" },
-              },
-              workspace = {
-                checkThirdParty = false,
-              },
-              codeLens = {
-                enable = true,
-              },
-              completion = {
-                callSnippet = "Replace",
-              },
-              doc = {
-                privateName = { "^_" },
-              },
-              hint = {
-                enable = true,
-                setType = false,
-                paramType = true,
-                paramName = "Disable",
-                semicolon = "Disable",
-                arrayIndex = "Disable",
-              },
-            },
-          },
+        somesass_ls = {
+          filetypes = { "css", "scss", "sass" },
         },
-
-        tailwindcss = {
-          cmd = {
-            "tailwindcss-language-server",
-            "--stdio",
-          },
-        },
-
-        stylelint_lsp = {
-          filetypes = {
-            "css",
-            "scss",
-            "less"
-          }
-        }
-      },
-    },
-  },
-
-  {
-    "mason-org/mason-lspconfig.nvim",
-    opts = {
-      ensure_installed = {
-        "ts_ls",
-        "tailwindcss",
-        "cssls",
       },
     },
   },
 }
+
