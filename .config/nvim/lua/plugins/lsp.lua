@@ -4,6 +4,7 @@ return {
 
     opts = {
       servers = {
+        cssls = {},
         vtsls = {
         },
         stylua = { enabled = false },
@@ -61,6 +62,7 @@ return {
       ensure_installed = {
         "ts_ls",
         "tailwindcss",
+        "cssls",
       },
     },
   },
