@@ -8,6 +8,15 @@ return {
         },
         somesass_ls = {
           filetypes = { "css", "scss", "sass" },
+          settings = {
+            somesass = {
+              scss = {
+                completion = {
+                  mixinStyle = "nobracket",
+                },
+              },
+            },
+          },
         },
         lua_ls = {
           settings = {

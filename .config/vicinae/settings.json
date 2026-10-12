@@ -128,7 +128,8 @@
                "/home/alex/.linuxmint"
             ],
             "indexingPaths": [
-               "/home/alex"
+               "/home/alex",
+               "/run/media/alex/FILES"
             ]
          },
          "entrypoints": {
