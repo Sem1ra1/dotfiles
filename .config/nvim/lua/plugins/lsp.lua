@@ -9,8 +9,16 @@ return {
         somesass_ls = {
           filetypes = { "css", "scss", "sass" },
         },
+        lua_ls = {
+          settings = {
+            Lua = {
+              diagnostics = {
+                globals = { "vim", "Snacks", "LazyVim" },
+              },
+            },
+          },
+        },
       },
     },
   },
 }
-
