@@ -4,6 +4,7 @@ return {
     opts = {
       keymap = {
         preset = "default",
+        ["<CR>"] = { "accept", "fallback" },
         -- ["<Tab>"] = { "accept", "fallback" },
         ["<C-space>"] = { "show", "show_documentation", "hide_documentation" },
       },
@@ -31,10 +32,13 @@ return {
           show_on_accept_on_trigger_character = true,
         },
         ghost_text = {
-          enabled = true,
+          enabled = false,
         },
         menu = {
-          auto_show = true,
+          auto_show = function(ctx)
+            local before_cursor = ctx.line:sub(1, ctx.cursor[2] - 1)
+            return #ctx:get_keyword() > 0 or before_cursor:match("%./$") ~= nil
+          end,
           draw = {
             -- padding = {0, 1},
             cursorline_priority = 0,

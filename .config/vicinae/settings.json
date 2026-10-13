@@ -99,6 +99,9 @@
             "org.gnome.font-viewer": {
                "enabled": false
             },
+            "org.qbittorrent.qBittorrent": {
+               "alias": "Torrent"
+            },
             "tauonmb": {
                "alias": "Audio Player"
             }

@@ -3,7 +3,7 @@ source /usr/share/cachyos-fish-config/cachyos-config.fish
 if status is-interactive
     set -x OBSIDIAN_DIR "$HOME/Documents/Obsidian"
     alias obs="cd $OBSIDIAN_DIR"
-    
+
     set -x FISH_CFG "$HOME/.config/fish/config.fish"
     alias fishcfg="nvim $FISH_CFG"
 
@@ -14,6 +14,8 @@ if status is-interactive
     alias kittycfg="nvim $KITTY_CFG"
 
     alias mnvim="NVIM_APPNAME=nvim_refined nvim"
+
+    alias lserver="cd ~/Documents/Test_folder & live-server & disown & npx sass --watch ./styles/styles.scss ./styles/styles.css & disown"
 
     # alias ls="lsd --oneline"
     # alias l="ls -l"
