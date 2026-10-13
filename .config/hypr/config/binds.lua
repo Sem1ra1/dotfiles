@@ -278,3 +278,8 @@ hl.bind("SUPER + I", hl.dsp.send_shortcut({
     mods = "",
     key = "RETURN"
 }))
+
+hl.bind("ALT + I", hl.dsp.send_shortcut({
+    mods = "",
+    key = "RETURN"
+}))
