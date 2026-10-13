@@ -20,14 +20,6 @@ return {
               local before_current_word = context.line:sub(1, context.bounds.start_col - 1)
               return before_current_word:sub(-1) ~= "/"
             end,
-
-            -- Mixins suggestions with and without `{}`
-            -- transform_items = function(_, items)
-            --   return vim.tbl_filter(function(item)
-            --     local detail = item.labelDetails and item.labelDetails.detail
-            --     return not (detail and detail:match("{ }%s*$"))
-            --   end, items)
-            -- end,
           },
           snippets = {
           },
