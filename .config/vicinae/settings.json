@@ -114,6 +114,13 @@
             }
          }
       },
+      "core": {
+         "entrypoints": {
+            "refresh-apps": {
+               "enabled": false
+            }
+         }
+      },
       "files": {
          "preferences": {
             "autoIndexing": true,

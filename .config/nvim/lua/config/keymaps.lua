@@ -68,3 +68,15 @@ end
 vim.keymap.set("i", "<CR>", smart_enter, {
   desc = "Smart HTML enter",
 })
+
+-- Autorename tags
+vim.keymap.set("n", "tt", function()
+    vim.cmd("TsTagRename")
+    vim.schedule(function()
+        vim.api.nvim_feedkeys(
+            vim.api.nvim_replace_termcodes("<C-w>", true, false, true),
+            "t",
+            false
+        )
+    end)
+end, { desc = "Rename tag" })
